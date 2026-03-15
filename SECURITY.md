@@ -2,16 +2,16 @@
 
 ## Scope
 
-Este repositorio contiene documentación y referencias a herramientas. No incluye código ejecutable ni infraestructura desplegada.
+This repository contains documentation and references to security tools. It does not include executable code or deployed infrastructure.
 
 ## Reporting
 
-Si encuentras contenido que pueda facilitar un uso malicioso no intencionado, o un error de seguridad en la documentación — contacta por privado antes de abrir un issue público:
+If you find content that could unintentionally facilitate malicious use, or a security error in the documentation — contact privately before opening a public issue:
 
 **nervi-zz@protonmail.com**
 
-Incluye: descripción del problema, ubicación en el repositorio y, si aplica, impacto potencial.
+Include: a description of the problem, its location in the repository, and, if applicable, the potential impact.
 
-## Aviso de uso
+## Usage notice
 
-Todas las herramientas documentadas aquí son para uso en sistemas propios o con autorización explícita. El repositorio no cubre ni promueve usos ofensivos no autorizados.
+All tools documented here are for use on systems you own or have explicit authorization to test. This repository does not cover or promote unauthorized offensive use.
