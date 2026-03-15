@@ -1,0 +1,193 @@
+<svg viewBox="0 0 900 220" xmlns="http://www.w3.org/2000/svg" width="900" height="220">
+  <defs>
+    <linearGradient id="lineGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#7C3AED" stop-opacity="0"/>
+      <stop offset="30%" stop-color="#7C3AED"/>
+      <stop offset="70%" stop-color="#06B6D4"/>
+      <stop offset="100%" stop-color="#06B6D4" stop-opacity="0"/>
+    </linearGradient>
+    <linearGradient id="titleGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#7C3AED"/>
+      <stop offset="100%" stop-color="#06B6D4"/>
+    </linearGradient>
+    <linearGradient id="scanGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#06B6D4" stop-opacity="0"/>
+      <stop offset="50%" stop-color="#06B6D4" stop-opacity="0.15"/>
+      <stop offset="100%" stop-color="#06B6D4" stop-opacity="0"/>
+    </linearGradient>
+    <filter id="glow">
+      <feGaussianBlur stdDeviation="3" result="blur"/>
+      <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+    <filter id="glow-strong">
+      <feGaussianBlur stdDeviation="5" result="blur"/>
+      <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+  </defs>
+
+  <style>
+    .bg { fill: #020810; }
+    .grid { stroke: #0a1628; stroke-width: 0.5; fill: none; }
+    .corner { stroke: #7C3AED; stroke-width: 1.5; fill: none; }
+    .tl { stroke-dasharray: 20; stroke-dashoffset: 20; animation: draw 0.4s ease forwards 0.1s; }
+    .tr { stroke-dasharray: 20; stroke-dashoffset: 20; animation: draw 0.4s ease forwards 0.2s; }
+    .bl { stroke-dasharray: 20; stroke-dashoffset: 20; animation: draw 0.4s ease forwards 0.3s; }
+    .br { stroke-dasharray: 20; stroke-dashoffset: 20; animation: draw 0.4s ease forwards 0.4s; }
+    .flow-line { stroke-dasharray: 880; stroke-dashoffset: 880; animation: flow 1.1s ease forwards 0.5s; }
+    .scan { animation: scan 3.8s linear infinite 1.5s; }
+    .title { font-family: 'JetBrains Mono', monospace; font-weight: 700; font-size: 32px; fill: url(#titleGrad); filter: url(#glow-strong); opacity: 0; animation: fadein 0.5s ease forwards 0.9s; }
+    .subtitle { font-family: 'JetBrains Mono', monospace; font-weight: 400; font-size: 13px; fill: #94A3B8; opacity: 0; animation: fadein 0.5s ease forwards 1.1s; }
+    .label { font-family: 'JetBrains Mono', monospace; font-weight: 400; font-size: 11px; }
+    .tag-box { fill: none; stroke-width: 1; rx: 3; }
+    .dot { r: 3; }
+    .particle { animation: float 4s ease-in-out infinite; opacity: 0.4; }
+    .p1 { animation-delay: 0s; }
+    .p2 { animation-delay: 0.8s; }
+    .p3 { animation-delay: 1.6s; }
+    .p4 { animation-delay: 2.4s; }
+    .p5 { animation-delay: 0.4s; }
+    .p6 { animation-delay: 1.2s; }
+    .tag1 { opacity: 0; animation: fadein 0.4s ease forwards 1.3s; }
+    .tag2 { opacity: 0; animation: fadein 0.4s ease forwards 1.45s; }
+    .tag3 { opacity: 0; animation: fadein 0.4s ease forwards 1.6s; }
+    .tag4 { opacity: 0; animation: fadein 0.4s ease forwards 1.75s; }
+    .tag5 { opacity: 0; animation: fadein 0.4s ease forwards 1.9s; }
+    .tag6 { opacity: 0; animation: fadein 0.4s ease forwards 2.05s; }
+    .badge { opacity: 0; animation: fadein 0.5s ease forwards 2.2s; }
+    .version { font-family: 'JetBrains Mono', monospace; font-size: 10px; fill: #94A3B8; opacity: 0; animation: fadein 0.4s ease forwards 2.4s; }
+
+    @keyframes draw { to { stroke-dashoffset: 0; } }
+    @keyframes flow { to { stroke-dashoffset: 0; } }
+    @keyframes scan {
+      0%   { transform: translateY(-30px); }
+      100% { transform: translateY(250px); }
+    }
+    @keyframes fadein { to { opacity: 1; } }
+    @keyframes float {
+      0%, 100% { transform: translateY(0); }
+      50% { transform: translateY(-6px); }
+    }
+    @keyframes pulse {
+      0%, 100% { opacity: 0.6; }
+      50% { opacity: 1; }
+    }
+    .glow-pulse { animation: pulse 2.5s ease-in-out infinite 2s; }
+  </style>
+
+  <!-- Background -->
+  <rect class="bg" width="900" height="220"/>
+
+  <!-- Grid lines horizontal -->
+  <line class="grid" x1="0" y1="27" x2="900" y2="27"/>
+  <line class="grid" x1="0" y1="54" x2="900" y2="54"/>
+  <line class="grid" x1="0" y1="81" x2="900" y2="81"/>
+  <line class="grid" x1="0" y1="108" x2="900" y2="108"/>
+  <line class="grid" x1="0" y1="135" x2="900" y2="135"/>
+  <line class="grid" x1="0" y1="162" x2="900" y2="162"/>
+  <line class="grid" x1="0" y1="189" x2="900" y2="189"/>
+
+  <!-- Grid lines vertical -->
+  <line class="grid" x1="90" y1="0" x2="90" y2="220"/>
+  <line class="grid" x1="180" y1="0" x2="180" y2="220"/>
+  <line class="grid" x1="270" y1="0" x2="270" y2="220"/>
+  <line class="grid" x1="360" y1="0" x2="360" y2="220"/>
+  <line class="grid" x1="450" y1="0" x2="450" y2="220"/>
+  <line class="grid" x1="540" y1="0" x2="540" y2="220"/>
+  <line class="grid" x1="630" y1="0" x2="630" y2="220"/>
+  <line class="grid" x1="720" y1="0" x2="720" y2="220"/>
+  <line class="grid" x1="810" y1="0" x2="810" y2="220"/>
+
+  <!-- Scan line -->
+  <rect class="scan" x="0" y="0" width="900" height="30" fill="url(#scanGrad)"/>
+
+  <!-- Top flow line -->
+  <path class="flow-line" d="M 20 8 L 880 8" stroke="url(#lineGrad)" stroke-width="1.5" fill="none"/>
+
+  <!-- Corner brackets TL -->
+  <path class="corner tl" d="M 20 30 L 20 18 L 32 18"/>
+  <!-- Corner TR -->
+  <path class="corner tr" d="M 880 30 L 880 18 L 868 18"/>
+  <!-- Corner BL -->
+  <path class="corner bl" d="M 20 190 L 20 202 L 32 202"/>
+  <!-- Corner BR -->
+  <path class="corner br" d="M 880 190 L 880 202 L 868 202"/>
+
+  <!-- Left particles -->
+  <circle class="particle p1" cx="12" cy="60" r="1.5" fill="#7C3AED"/>
+  <circle class="particle p2" cx="8" cy="100" r="1" fill="#06B6D4"/>
+  <circle class="particle p3" cx="14" cy="145" r="1.5" fill="#7C3AED"/>
+  <circle class="particle p4" cx="6" cy="175" r="1" fill="#06B6D4"/>
+  <circle class="particle p5" cx="18" cy="80" r="1" fill="#06B6D4"/>
+  <circle class="particle p6" cx="10" cy="125" r="1.5" fill="#7C3AED"/>
+
+  <!-- Right particles -->
+  <circle class="particle p2" cx="888" cy="55" r="1.5" fill="#7C3AED"/>
+  <circle class="particle p3" cx="892" cy="95" r="1" fill="#06B6D4"/>
+  <circle class="particle p1" cx="886" cy="140" r="1.5" fill="#7C3AED"/>
+  <circle class="particle p4" cx="894" cy="170" r="1" fill="#06B6D4"/>
+  <circle class="particle p6" cx="882" cy="75" r="1" fill="#06B6D4"/>
+  <circle class="particle p5" cx="890" cy="115" r="1.5" fill="#7C3AED"/>
+
+  <!-- Prompt prefix -->
+  <text x="46" y="72" font-family="'JetBrains Mono', monospace" font-size="13px" fill="#7C3AED" opacity="0" style="animation: fadein 0.4s ease forwards 0.7s">$</text>
+  <text x="60" y="72" font-family="'JetBrains Mono', monospace" font-size="13px" fill="#94A3B8" opacity="0" style="animation: fadein 0.4s ease forwards 0.75s">cat tools/</text>
+  <text x="156" y="72" font-family="'JetBrains Mono', monospace" font-size="13px" fill="#06B6D4" opacity="0" style="animation: fadein 0.4s ease forwards 0.8s">index.md</text>
+
+  <!-- Main title -->
+  <text class="title" x="46" y="118">blue-team-tools</text>
+
+  <!-- Subtitle -->
+  <text class="subtitle" x="48" y="141">Herramientas Blue Team — defensa, deteccion, DFIR, CTI, SIEM, endpoint</text>
+
+  <!-- Tags row -->
+  <!-- Tag: SOC -->
+  <g class="tag1">
+    <rect x="46" y="158" width="42" height="18" rx="3" fill="none" stroke="#7C3AED" stroke-width="1"/>
+    <circle cx="56" cy="167" r="3" fill="#7C3AED"/>
+    <text class="label" x="63" y="171" fill="#E6EDF3">SOC</text>
+  </g>
+  <!-- Tag: DFIR -->
+  <g class="tag2">
+    <rect x="96" y="158" width="46" height="18" rx="3" fill="none" stroke="#06B6D4" stroke-width="1"/>
+    <circle cx="106" cy="167" r="3" fill="#06B6D4"/>
+    <text class="label" x="113" y="171" fill="#E6EDF3">DFIR</text>
+  </g>
+  <!-- Tag: Threat Intel -->
+  <g class="tag3">
+    <rect x="150" y="158" width="84" height="18" rx="3" fill="none" stroke="#7C3AED" stroke-width="1"/>
+    <circle cx="160" cy="167" r="3" fill="#7C3AED"/>
+    <text class="label" x="167" y="171" fill="#E6EDF3">Threat Intel</text>
+  </g>
+  <!-- Tag: Network -->
+  <g class="tag4">
+    <rect x="242" y="158" width="68" height="18" rx="3" fill="none" stroke="#06B6D4" stroke-width="1"/>
+    <circle cx="252" cy="167" r="3" fill="#06B6D4"/>
+    <text class="label" x="259" y="171" fill="#E6EDF3">Network</text>
+  </g>
+  <!-- Tag: Endpoint -->
+  <g class="tag5">
+    <rect x="318" y="158" width="73" height="18" rx="3" fill="none" stroke="#7C3AED" stroke-width="1"/>
+    <circle cx="328" cy="167" r="3" fill="#7C3AED"/>
+    <text class="label" x="335" y="171" fill="#E6EDF3">Endpoint</text>
+  </g>
+  <!-- Tag: Open Source -->
+  <g class="tag6">
+    <rect x="399" y="158" width="90" height="18" rx="3" fill="none" stroke="#22C55E" stroke-width="1"/>
+    <circle cx="409" cy="167" r="3" fill="#22C55E"/>
+    <text class="label" x="416" y="171" fill="#E6EDF3">Open Source</text>
+  </g>
+
+  <!-- Bottom stat line -->
+  <text class="version" x="46" y="200">9 dominios · 50+ herramientas · referencia operacional</text>
+
+  <!-- Right side badge -->
+  <g class="badge glow-pulse" filter="url(#glow)">
+    <rect x="710" y="85" width="148" height="50" rx="4" fill="#0a1628" stroke="#7C3AED" stroke-width="1"/>
+    <text font-family="'JetBrains Mono', monospace" font-size="9px" fill="#94A3B8" x="724" y="104">MIGUEL ALAMEDA</text>
+    <text font-family="'JetBrains Mono', monospace" font-size="9px" fill="#94A3B8" x="724" y="117">@Nervi0z · VAR Group</text>
+    <text font-family="'JetBrains Mono', monospace" font-size="9px" fill="#06B6D4" x="724" y="130">Security Analyst · Madrid</text>
+  </g>
+
+  <!-- Bottom right: tool count indicator -->
+  <text font-family="'JetBrains Mono', monospace" font-size="9px" fill="#7C3AED" x="730" y="160" opacity="0" style="animation: fadein 0.4s ease forwards 2.5s">// blue team field reference</text>
+</svg>
